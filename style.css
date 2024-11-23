@@ -1,18 +1,70 @@
-body {
-    background-color: bisque;
+/* Resetando algumas propriedades padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.manga-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.manga-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.manga-item:hover {
+    transform: translateY(-10px);
+}
+
+.manga-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.manga-item h2 {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.manga-item p {
+    padding: 0 10px;
+    color: #555;
+}
 
 footer {
-    background-color: black;
+    background-color: #333;
     color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2rem;
-}
-footer p {
     text-align: center;
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
